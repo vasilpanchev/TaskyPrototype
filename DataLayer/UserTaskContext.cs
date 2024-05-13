@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    class UserTaskContext
+    public class UserTaskContext
     {
         private readonly TaskyPrototypeContext _taskyPrototypeContext;
 
