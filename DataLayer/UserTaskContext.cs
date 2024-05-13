@@ -19,7 +19,7 @@ namespace DataLayer
 
         public void Create(User user, UserTask entity)
         {
-            entity.User = user;
+            entity.Username = user.Username;
 
             _taskyPrototypeContext.UserTasks.Add(entity);
             _taskyPrototypeContext.SaveChanges();

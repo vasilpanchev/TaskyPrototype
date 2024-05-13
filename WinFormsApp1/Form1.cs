@@ -55,5 +55,25 @@ namespace WinFormsApp1
             userTaskContext.Create(currentUser, userTask);
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string username = textBox3.Text;
+            string password = textBox5.Text;
+
+            User user = new User(username, password)
+            {
+                Username = username,
+                Password = password
+            };
+
+            UserContext userContext = new UserContext(taskyPrototypeContext);
+
+            if (userContext.Read(username) != null)
+            {
+                currentUsername = user.Username;
+                currentPassword = user.Password;
+            }
+        }
     }
 }
