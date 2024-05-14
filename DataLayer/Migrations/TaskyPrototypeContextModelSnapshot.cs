@@ -37,7 +37,7 @@ namespace DataLayer.Migrations
 
                     b.HasKey("Username");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("BusinessLayer.UserTask", b =>
@@ -71,7 +71,7 @@ namespace DataLayer.Migrations
 
                     b.HasIndex("Username");
 
-                    b.ToTable("UserTasks");
+                    b.ToTable("UserTasks", (string)null);
                 });
 
             modelBuilder.Entity("BusinessLayer.UserTask", b =>

@@ -49,7 +49,7 @@ namespace WinFormsApp1
             UserTask userTask = new UserTask(taskTitle, "", DateTime.Now, DateTime.Now, currentUsername)
             {
                 Title = taskTitle,
-                User = currentUser
+                Username = currentUsername
             };
 
             userTaskContext.Create(currentUser, userTask);
@@ -58,8 +58,8 @@ namespace WinFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string username = textBox3.Text;
-            string password = textBox5.Text;
+            string username = textBox5.Text;
+            string password = textBox3.Text;
 
             User user = new User(username, password)
             {
@@ -69,10 +69,12 @@ namespace WinFormsApp1
 
             UserContext userContext = new UserContext(taskyPrototypeContext);
 
-            if (userContext.Read(username) != null)
+            User userFromDb = userContext.Read(username);
+
+            if (user.Password.Equals(userFromDb.Password) && userFromDb is not null)
             {
-                currentUsername = user.Username;
-                currentPassword = user.Password;
+                currentUsername = username;
+                currentPassword = password;
             }
         }
     }

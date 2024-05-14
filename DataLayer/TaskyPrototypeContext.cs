@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -17,7 +18,7 @@ namespace DataLayer
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+           modelBuilder.HasOne<Username>
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

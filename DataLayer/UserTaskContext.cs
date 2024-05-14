@@ -37,7 +37,7 @@ namespace DataLayer
 
                 if (useNavigationalProperties)
                 {
-                    query = query.Include(t => t.User);
+                    query = query.Include(t => t.Username);
                 }
                 if (isReadOnlyTrue)
                 {
@@ -60,7 +60,7 @@ namespace DataLayer
 
                 if (useNavigationalProperties)
                 {
-                    query = query.Include(t => t.User);
+                    query = query.Include(t => t.Username);
                 }
                 if (isReadOnlyTrue)
                 {
