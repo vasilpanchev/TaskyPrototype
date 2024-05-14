@@ -24,8 +24,6 @@ namespace DataLayer
             _taskyPrototypeContext.UserTasks.Add(entity);
             _taskyPrototypeContext.SaveChanges();
 
-            user.Tasks.Add(entity);
-
 
         }
 

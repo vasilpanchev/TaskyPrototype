@@ -27,6 +27,7 @@ namespace BusinessLayer
 
         [ForeignKey(nameof(User))]
         public string Username { get; set; }
+        public User User { get; set; }
 
         private UserTask()
         {

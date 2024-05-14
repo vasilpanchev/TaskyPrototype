@@ -1,6 +1,6 @@
 ﻿using BusinessLayer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.SqlServer;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -17,8 +17,15 @@ namespace DataLayer
         public TaskyPrototypeContext(DbContextOptions options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-           modelBuilder.HasOne<Username>
+        {   
+            modelBuilder
+                .Entity<UserTask>()
+                .HasOne<User>(t => t.User)
+                 .WithMany(u => u.Tasks)
+                 .HasForeignKey(t => t.Username)
+                 .HasConstraintName("FK_Username");
+
+            base.OnModelCreating(modelBuilder);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
