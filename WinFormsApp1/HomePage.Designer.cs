@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelHomeHomePage = new Label();
             labelUsernameHomePage = new Label();
             dGVTasksHomePage = new DataGridView();
             btnNewTaskHomePage = new Button();
@@ -42,25 +41,9 @@
             btnUpdateTaskHomePage = new Button();
             labelUpdateTaskHomePage = new Label();
             btnSaveUpdateTaskHomePage = new Button();
-            labelTaskIdUpdateHomePage = new Label();
-            tBTaskIdUpdateHomePage = new TextBox();
             btnDeleteTaskHomePage = new Button();
-            labelDeleteTaskHomePage = new Label();
-            btnClearDeleteHomePage = new Button();
-            btnDeleteDeleteHomePage = new Button();
-            labelTaskIdDeleteHomePage = new Label();
-            tBTaskIdDeleteHomePage = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dGVTasksHomePage).BeginInit();
             SuspendLayout();
-            // 
-            // labelHomeHomePage
-            // 
-            labelHomeHomePage.AutoSize = true;
-            labelHomeHomePage.Location = new Point(304, 58);
-            labelHomeHomePage.Name = "labelHomeHomePage";
-            labelHomeHomePage.Size = new Size(40, 15);
-            labelHomeHomePage.TabIndex = 0;
-            labelHomeHomePage.Text = "Home";
             // 
             // labelUsernameHomePage
             // 
@@ -95,7 +78,7 @@
             // 
             labelNewTaskHomePage.AutoSize = true;
             labelNewTaskHomePage.BorderStyle = BorderStyle.FixedSingle;
-            labelNewTaskHomePage.Location = new Point(129, 28);
+            labelNewTaskHomePage.Location = new Point(118, 28);
             labelNewTaskHomePage.Margin = new Padding(18, 15, 18, 15);
             labelNewTaskHomePage.Name = "labelNewTaskHomePage";
             labelNewTaskHomePage.Padding = new Padding(175, 15, 175, 262);
@@ -178,7 +161,7 @@
             // 
             labelUpdateTaskHomePage.AutoSize = true;
             labelUpdateTaskHomePage.BorderStyle = BorderStyle.FixedSingle;
-            labelUpdateTaskHomePage.Location = new Point(129, 28);
+            labelUpdateTaskHomePage.Location = new Point(118, 28);
             labelUpdateTaskHomePage.Margin = new Padding(18, 15, 18, 15);
             labelUpdateTaskHomePage.Name = "labelUpdateTaskHomePage";
             labelUpdateTaskHomePage.Padding = new Padding(175, 15, 175, 262);
@@ -199,23 +182,6 @@
             btnSaveUpdateTaskHomePage.Visible = false;
             btnSaveUpdateTaskHomePage.Click += btnSaveUpdateTaskHomePage_Click;
             // 
-            // labelTaskIdUpdateHomePage
-            // 
-            labelTaskIdUpdateHomePage.AutoSize = true;
-            labelTaskIdUpdateHomePage.Location = new Point(166, 86);
-            labelTaskIdUpdateHomePage.Name = "labelTaskIdUpdateHomePage";
-            labelTaskIdUpdateHomePage.Size = new Size(45, 15);
-            labelTaskIdUpdateHomePage.TabIndex = 14;
-            labelTaskIdUpdateHomePage.Text = "Task Id:";
-            // 
-            // tBTaskIdUpdateHomePage
-            // 
-            tBTaskIdUpdateHomePage.Location = new Point(220, 84);
-            tBTaskIdUpdateHomePage.Margin = new Padding(3, 2, 3, 2);
-            tBTaskIdUpdateHomePage.Name = "tBTaskIdUpdateHomePage";
-            tBTaskIdUpdateHomePage.Size = new Size(110, 23);
-            tBTaskIdUpdateHomePage.TabIndex = 15;
-            // 
             // btnDeleteTaskHomePage
             // 
             btnDeleteTaskHomePage.Location = new Point(133, 227);
@@ -227,73 +193,11 @@
             btnDeleteTaskHomePage.UseVisualStyleBackColor = true;
             btnDeleteTaskHomePage.Click += btnDeleteTaskHomePage_Click;
             // 
-            // labelDeleteTaskHomePage
-            // 
-            labelDeleteTaskHomePage.AutoSize = true;
-            labelDeleteTaskHomePage.BorderStyle = BorderStyle.FixedSingle;
-            labelDeleteTaskHomePage.Location = new Point(206, 38);
-            labelDeleteTaskHomePage.Name = "labelDeleteTaskHomePage";
-            labelDeleteTaskHomePage.Padding = new Padding(88, 8, 88, 112);
-            labelDeleteTaskHomePage.Size = new Size(243, 137);
-            labelDeleteTaskHomePage.TabIndex = 17;
-            labelDeleteTaskHomePage.Text = "Delete Task";
-            labelDeleteTaskHomePage.Visible = false;
-            // 
-            // btnClearDeleteHomePage
-            // 
-            btnClearDeleteHomePage.Location = new Point(220, 142);
-            btnClearDeleteHomePage.Margin = new Padding(3, 2, 3, 2);
-            btnClearDeleteHomePage.Name = "btnClearDeleteHomePage";
-            btnClearDeleteHomePage.Size = new Size(82, 22);
-            btnClearDeleteHomePage.TabIndex = 18;
-            btnClearDeleteHomePage.Text = "Clear";
-            btnClearDeleteHomePage.UseVisualStyleBackColor = true;
-            btnClearDeleteHomePage.Visible = false;
-            btnClearDeleteHomePage.Click += btnClearDeleteHomePage_Click;
-            // 
-            // btnDeleteDeleteHomePage
-            // 
-            btnDeleteDeleteHomePage.Location = new Point(355, 142);
-            btnDeleteDeleteHomePage.Margin = new Padding(3, 2, 3, 2);
-            btnDeleteDeleteHomePage.Name = "btnDeleteDeleteHomePage";
-            btnDeleteDeleteHomePage.Size = new Size(82, 22);
-            btnDeleteDeleteHomePage.TabIndex = 19;
-            btnDeleteDeleteHomePage.Text = "Delete";
-            btnDeleteDeleteHomePage.UseVisualStyleBackColor = true;
-            btnDeleteDeleteHomePage.Visible = false;
-            btnDeleteDeleteHomePage.Click += btnDeleteDeleteHomePage_Click;
-            // 
-            // labelTaskIdDeleteHomePage
-            // 
-            labelTaskIdDeleteHomePage.AutoSize = true;
-            labelTaskIdDeleteHomePage.Location = new Point(229, 87);
-            labelTaskIdDeleteHomePage.Name = "labelTaskIdDeleteHomePage";
-            labelTaskIdDeleteHomePage.Size = new Size(45, 15);
-            labelTaskIdDeleteHomePage.TabIndex = 20;
-            labelTaskIdDeleteHomePage.Text = "Task Id:";
-            labelTaskIdDeleteHomePage.Visible = false;
-            // 
-            // tBTaskIdDeleteHomePage
-            // 
-            tBTaskIdDeleteHomePage.Location = new Point(284, 85);
-            tBTaskIdDeleteHomePage.Margin = new Padding(3, 2, 3, 2);
-            tBTaskIdDeleteHomePage.Name = "tBTaskIdDeleteHomePage";
-            tBTaskIdDeleteHomePage.Size = new Size(110, 23);
-            tBTaskIdDeleteHomePage.TabIndex = 21;
-            tBTaskIdDeleteHomePage.Visible = false;
-            // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 338);
-            Controls.Add(tBTaskIdDeleteHomePage);
-            Controls.Add(labelTaskIdDeleteHomePage);
-            Controls.Add(btnDeleteDeleteHomePage);
-            Controls.Add(btnClearDeleteHomePage);
-            Controls.Add(labelDeleteTaskHomePage);
-            Controls.Add(tBTaskIdUpdateHomePage);
-            Controls.Add(labelTaskIdUpdateHomePage);
             Controls.Add(btnSaveUpdateTaskHomePage);
             Controls.Add(btnClearInfoTaskHomePage);
             Controls.Add(btnSaveNewTaskHomePage);
@@ -302,7 +206,6 @@
             Controls.Add(tBTitleTaskHomePage);
             Controls.Add(labelTitleTaskHomePage);
             Controls.Add(labelUsernameHomePage);
-            Controls.Add(labelHomeHomePage);
             Controls.Add(labelNewTaskHomePage);
             Controls.Add(labelUpdateTaskHomePage);
             Controls.Add(dGVTasksHomePage);
@@ -319,8 +222,6 @@
         }
 
         #endregion
-
-        private Label labelHomeHomePage;
         private Label labelUsernameHomePage;
         private DataGridView dGVTasksHomePage;
         private Button btnNewTaskHomePage;
@@ -334,13 +235,6 @@
         private Button btnUpdateTaskHomePage;
         private Label labelUpdateTaskHomePage;
         private Button btnSaveUpdateTaskHomePage;
-        private Label labelTaskIdUpdateHomePage;
-        private TextBox tBTaskIdUpdateHomePage;
         private Button btnDeleteTaskHomePage;
-        private Label labelDeleteTaskHomePage;
-        private Button btnClearDeleteHomePage;
-        private Button btnDeleteDeleteHomePage;
-        private Label labelTaskIdDeleteHomePage;
-        private TextBox tBTaskIdDeleteHomePage;
     }
 }

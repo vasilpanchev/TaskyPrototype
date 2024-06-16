@@ -73,20 +73,11 @@ namespace DataLayer
             }
         }
 
-        public bool Update(UserTask entity, bool useNavigationalProperties = false)
+        public void Update(UserTask entity, bool useNavigationalProperties = false)
         {
             UserTask userTaskFromDb = Read(entity.TaskId, useNavigationalProperties, false);
 
-            if (userTaskFromDb != null) 
-            {
-                userTaskFromDb = entity;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
+            _taskyPrototypeContext.Entry(userTaskFromDb).CurrentValues.SetValues(entity);
             _taskyPrototypeContext.SaveChanges();
         }
 
@@ -94,7 +85,7 @@ namespace DataLayer
         {
             UserTask userTaskFromDb = Read(key, false, false);
 
-            if (userTaskFromDb != null)
+            if (userTaskFromDb == null)
             {
                 throw new ArgumentException("Task " + key + " does not exist.");
             }
