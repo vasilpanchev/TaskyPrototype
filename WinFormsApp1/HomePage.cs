@@ -104,7 +104,7 @@ namespace PresentationLayer
         private void btnDeleteTaskHomePage_Click(object sender, EventArgs e)
         {
             var item = dGVTasksHomePage.SelectedRows[0].Cells;
-            var taskToUpdateId = int.Parse(item[0].Value.ToString());
+            int taskToUpdateId = int.Parse(item[0].Value.ToString());
 
             UserTaskContext userTaskContext = new UserTaskContext(taskyPrototypeContext);
 
