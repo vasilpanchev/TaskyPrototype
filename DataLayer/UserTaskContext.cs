@@ -73,13 +73,18 @@ namespace DataLayer
             }
         }
 
-        public void Update(UserTask entity, bool useNavigationalProperties = false)
+        public bool Update(UserTask entity, bool useNavigationalProperties = false)
         {
             UserTask userTaskFromDb = Read(entity.TaskId, useNavigationalProperties, false);
 
             if (userTaskFromDb != null) 
             {
                 userTaskFromDb = entity;
+                return true;
+            }
+            else
+            {
+                return false;
             }
 
             _taskyPrototypeContext.SaveChanges();

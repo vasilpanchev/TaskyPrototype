@@ -40,10 +40,12 @@ namespace PresentationLayer
 
         private void btnUpdateTaskHomePage_Click(object sender, EventArgs e)
         {
+            labelTaskIdUpdateHomePage.Show();
             labelUpdateTaskHomePage.Show();
             labelTitleTaskHomePage.Show();
             labelEndDateTaskHomePage.Show();
             tBTitleTaskHomePage.Show();
+            tBTaskIdUpdateHomePage.Show();
             dTPTaskHomePage.Show();
             btnClearInfoTaskHomePage.Show();
             btnSaveUpdateTaskHomePage.Show();
@@ -57,17 +59,31 @@ namespace PresentationLayer
         private void btnSaveUpdateTaskHomePage_Click(object sender, EventArgs e)
         {
             string taskTitle = tBTitleTaskHomePage.Text;
+            int updateTaskId = Convert.ToInt32(tBTaskIdUpdateHomePage.Text);
 
             UserTaskContext userTaskContext = new(taskyPrototypeContext);
 
-            UserTask userTask = new UserTask(taskTitle, "", dTPTaskHomePage.Value, DateTime.Now, currentUser.Username)
+            UserTask userTask = new UserTask(updateTaskId, taskTitle, "", dTPTaskHomePage.Value, DateTime.Now, currentUser.Username)
             {
+                TaskId = updateTaskId,
                 Title = taskTitle,
                 StartDate = dTPTaskHomePage.Value,
                 Username = currentUser.Username
             };
 
-            userTaskContext.Update(userTask);
+            if (userTaskContext.Update(userTask) == false)
+            {
+                MessageBox.Show("There is not a task with this Id!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            labelTaskIdUpdateHomePage.Hide();
+            labelUpdateTaskHomePage.Hide();
+            labelTitleTaskHomePage.Hide();
+            labelEndDateTaskHomePage.Hide();
+            tBTitleTaskHomePage.Hide();
+            tBTaskIdUpdateHomePage.Hide();
+            dTPTaskHomePage.Hide();
+            btnClearInfoTaskHomePage.Hide();
+            btnSaveUpdateTaskHomePage.Hide();
         }
 
         private void btnSaveNewTaskHomePage_Click(object sender, EventArgs e)
@@ -84,6 +100,14 @@ namespace PresentationLayer
             };
 
             userTaskContext.Create(currentUser, userTask);
+
+            labelNewTaskHomePage.Hide();
+            labelTitleTaskHomePage.Hide();
+            labelEndDateTaskHomePage.Hide();
+            tBTitleTaskHomePage.Hide();
+            dTPTaskHomePage.Hide();
+            btnClearInfoTaskHomePage.Hide();
+            btnSaveNewTaskHomePage.Hide();
         }
 
         private void HomePage_Load(object sender, EventArgs e)
@@ -101,6 +125,30 @@ namespace PresentationLayer
                 }
             }
             dGVTasksHomePage.DataSource = tasksOfCurrentUser;
+        }
+
+        private void btnDeleteTaskHomePage_Click(object sender, EventArgs e)
+        {
+            labelDeleteTaskHomePage.Show();
+            labelTaskIdDeleteHomePage.Show();
+            tBTaskIdDeleteHomePage.Show();
+            btnClearDeleteHomePage.Hide();
+            btnDeleteDeleteHomePage.Hide();
+
+        }
+
+        private void btnClearDeleteHomePage_Click(object sender, EventArgs e)
+        {
+            tBTaskIdDeleteHomePage.Text = "";
+        }
+
+        private void btnDeleteDeleteHomePage_Click(object sender, EventArgs e)
+        {
+            int taskId = Convert.ToInt32(tBTaskIdDeleteHomePage.Text);
+
+            UserTaskContext userTaskContext = new(taskyPrototypeContext);
+
+            userTaskContext.Delete(taskId);
         }
     }
 }

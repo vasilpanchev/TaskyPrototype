@@ -43,5 +43,14 @@ namespace BusinessLayer
             Username = username;
         }
 
+        public UserTask(int taskId, string taskTitle, string taskDescription, DateTime startDate, DateTime endDate, string username)
+        {
+            TaskId = taskId;
+            Title = taskTitle;
+            Description = taskDescription;
+            StartDate = startDate;
+            EndDate = endDate;
+            Username = username;
+        }
     }
 }
