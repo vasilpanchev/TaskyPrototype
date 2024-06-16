@@ -63,11 +63,11 @@ namespace PresentationLayer
 
             UserTaskContext userTaskContext = new(taskyPrototypeContext);
 
-            UserTask userTask = new UserTask(updateTaskId, taskTitle, "", dTPTaskHomePage.Value, DateTime.Now, currentUser.Username)
+            UserTask userTask = new UserTask(updateTaskId, taskTitle, "", DateTime.Now, DateTime.NowdTPTaskHomePage.Value, currentUser.Username)
             {
                 TaskId = updateTaskId,
                 Title = taskTitle,
-                StartDate = dTPTaskHomePage.Value,
+                EndDate = dTPTaskHomePage.Value,
                 Username = currentUser.Username
             };
 
