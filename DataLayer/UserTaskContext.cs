@@ -50,7 +50,7 @@ namespace DataLayer
             }
         }
 
-        public List<UserTask> ReadAll(int key, bool useNavigationalProperties = false, bool isReadOnlyTrue = true)
+        public List<UserTask> ReadAll(bool useNavigationalProperties = false, bool isReadOnlyTrue = true)
         {
             try
             {

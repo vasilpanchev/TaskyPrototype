@@ -25,6 +25,8 @@ namespace PresentationLayer
             this.currentUser = user;
             tasksOfCurrentUser = new List<UserTask>();
 
+            InitializeComponent();
+
             labelNewTaskHomePage.Hide();
             labelTitleTaskHomePage.Hide();
             labelEndDateTaskHomePage.Hide();
@@ -48,8 +50,6 @@ namespace PresentationLayer
             tBTaskIdDeleteHomePage.Hide();
             btnClearDeleteHomePage.Hide();
             btnDeleteDeleteHomePage.Hide();
-
-            InitializeComponent();
         }
 
         private void HomePage_Load(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace PresentationLayer
 
             labelUsernameHomePage.Text = currentUser.Username;
             UserTaskContext fromContextUserTask = new UserTaskContext(taskyPrototypeContext);
-            List<UserTask> tasks = fromContextUserTask.ReadAll(0);
+            List<UserTask> tasks = fromContextUserTask.ReadAll();
 
             foreach (UserTask task in tasks)
             {

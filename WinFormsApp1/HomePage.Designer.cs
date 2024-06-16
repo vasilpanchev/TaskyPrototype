@@ -56,34 +56,36 @@
             // labelHomeHomePage
             // 
             labelHomeHomePage.AutoSize = true;
-            labelHomeHomePage.Location = new Point(347, 78);
+            labelHomeHomePage.Location = new Point(304, 58);
             labelHomeHomePage.Name = "labelHomeHomePage";
-            labelHomeHomePage.Size = new Size(50, 20);
+            labelHomeHomePage.Size = new Size(40, 15);
             labelHomeHomePage.TabIndex = 0;
             labelHomeHomePage.Text = "Home";
             // 
             // labelUsernameHomePage
             // 
             labelUsernameHomePage.AutoSize = true;
-            labelUsernameHomePage.Location = new Point(10, 14);
+            labelUsernameHomePage.Location = new Point(9, 10);
             labelUsernameHomePage.Name = "labelUsernameHomePage";
-            labelUsernameHomePage.Size = new Size(0, 20);
+            labelUsernameHomePage.Size = new Size(0, 15);
             labelUsernameHomePage.TabIndex = 1;
             // 
             // dGVTasksHomePage
             // 
             dGVTasksHomePage.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dGVTasksHomePage.Location = new Point(418, 132);
+            dGVTasksHomePage.Location = new Point(366, 99);
+            dGVTasksHomePage.Margin = new Padding(3, 2, 3, 2);
             dGVTasksHomePage.Name = "dGVTasksHomePage";
             dGVTasksHomePage.RowHeadersWidth = 51;
-            dGVTasksHomePage.Size = new Size(337, 247);
+            dGVTasksHomePage.Size = new Size(295, 185);
             dGVTasksHomePage.TabIndex = 2;
             // 
             // btnNewTaskHomePage
             // 
-            btnNewTaskHomePage.Location = new Point(51, 216);
+            btnNewTaskHomePage.Location = new Point(45, 162);
+            btnNewTaskHomePage.Margin = new Padding(3, 2, 3, 2);
             btnNewTaskHomePage.Name = "btnNewTaskHomePage";
-            btnNewTaskHomePage.Size = new Size(116, 29);
+            btnNewTaskHomePage.Size = new Size(102, 22);
             btnNewTaskHomePage.TabIndex = 3;
             btnNewTaskHomePage.Text = "New Task";
             btnNewTaskHomePage.UseVisualStyleBackColor = true;
@@ -93,52 +95,57 @@
             // 
             labelNewTaskHomePage.AutoSize = true;
             labelNewTaskHomePage.BorderStyle = BorderStyle.FixedSingle;
-            labelNewTaskHomePage.Location = new Point(147, 38);
-            labelNewTaskHomePage.Margin = new Padding(20);
+            labelNewTaskHomePage.Location = new Point(129, 28);
+            labelNewTaskHomePage.Margin = new Padding(18, 15, 18, 15);
             labelNewTaskHomePage.Name = "labelNewTaskHomePage";
-            labelNewTaskHomePage.Padding = new Padding(200, 20, 200, 350);
+            labelNewTaskHomePage.Padding = new Padding(175, 15, 175, 262);
             labelNewTaskHomePage.RightToLeft = RightToLeft.Yes;
-            labelNewTaskHomePage.Size = new Size(472, 392);
+            labelNewTaskHomePage.Size = new Size(408, 294);
             labelNewTaskHomePage.TabIndex = 4;
             labelNewTaskHomePage.Text = "New Task";
             // 
             // labelTitleTaskHomePage
             // 
             labelTitleTaskHomePage.AutoSize = true;
-            labelTitleTaskHomePage.Location = new Point(205, 159);
+            labelTitleTaskHomePage.Location = new Point(179, 119);
             labelTitleTaskHomePage.Name = "labelTitleTaskHomePage";
-            labelTitleTaskHomePage.Size = new Size(41, 20);
+            labelTitleTaskHomePage.Size = new Size(32, 15);
             labelTitleTaskHomePage.TabIndex = 5;
             labelTitleTaskHomePage.Text = "Title:";
             // 
             // tBTitleTaskHomePage
             // 
-            tBTitleTaskHomePage.Location = new Point(252, 156);
+            tBTitleTaskHomePage.Location = new Point(220, 117);
+            tBTitleTaskHomePage.Margin = new Padding(3, 2, 3, 2);
             tBTitleTaskHomePage.Name = "tBTitleTaskHomePage";
-            tBTitleTaskHomePage.Size = new Size(125, 27);
+            tBTitleTaskHomePage.Size = new Size(110, 23);
             tBTitleTaskHomePage.TabIndex = 6;
             // 
             // labelEndDateTaskHomePage
             // 
             labelEndDateTaskHomePage.AutoSize = true;
-            labelEndDateTaskHomePage.Location = new Point(173, 216);
+            labelEndDateTaskHomePage.Location = new Point(151, 162);
             labelEndDateTaskHomePage.Name = "labelEndDateTaskHomePage";
-            labelEndDateTaskHomePage.Size = new Size(73, 20);
+            labelEndDateTaskHomePage.Size = new Size(57, 15);
             labelEndDateTaskHomePage.TabIndex = 7;
             labelEndDateTaskHomePage.Text = "End Date:";
+            labelEndDateTaskHomePage.Visible = false;
             // 
             // dTPTaskHomePage
             // 
-            dTPTaskHomePage.Location = new Point(252, 211);
+            dTPTaskHomePage.Location = new Point(220, 158);
+            dTPTaskHomePage.Margin = new Padding(3, 2, 3, 2);
             dTPTaskHomePage.Name = "dTPTaskHomePage";
-            dTPTaskHomePage.Size = new Size(199, 27);
+            dTPTaskHomePage.Size = new Size(175, 23);
             dTPTaskHomePage.TabIndex = 8;
+            dTPTaskHomePage.Visible = false;
             // 
             // btnSaveNewTaskHomePage
             // 
-            btnSaveNewTaskHomePage.Location = new Point(427, 324);
+            btnSaveNewTaskHomePage.Location = new Point(374, 243);
+            btnSaveNewTaskHomePage.Margin = new Padding(3, 2, 3, 2);
             btnSaveNewTaskHomePage.Name = "btnSaveNewTaskHomePage";
-            btnSaveNewTaskHomePage.Size = new Size(94, 29);
+            btnSaveNewTaskHomePage.Size = new Size(82, 22);
             btnSaveNewTaskHomePage.TabIndex = 9;
             btnSaveNewTaskHomePage.Text = "Save";
             btnSaveNewTaskHomePage.UseVisualStyleBackColor = true;
@@ -146,19 +153,22 @@
             // 
             // btnClearInfoTaskHomePage
             // 
-            btnClearInfoTaskHomePage.Location = new Point(224, 324);
+            btnClearInfoTaskHomePage.Location = new Point(196, 243);
+            btnClearInfoTaskHomePage.Margin = new Padding(3, 2, 3, 2);
             btnClearInfoTaskHomePage.Name = "btnClearInfoTaskHomePage";
-            btnClearInfoTaskHomePage.Size = new Size(94, 29);
+            btnClearInfoTaskHomePage.Size = new Size(82, 22);
             btnClearInfoTaskHomePage.TabIndex = 10;
             btnClearInfoTaskHomePage.Text = "Clear";
             btnClearInfoTaskHomePage.UseVisualStyleBackColor = true;
+            btnClearInfoTaskHomePage.Visible = false;
             btnClearInfoTaskHomePage.Click += btnClearInfoTaskHomePage_Click;
             // 
             // btnUpdateTaskHomePage
             // 
-            btnUpdateTaskHomePage.Location = new Point(224, 216);
+            btnUpdateTaskHomePage.Location = new Point(196, 162);
+            btnUpdateTaskHomePage.Margin = new Padding(3, 2, 3, 2);
             btnUpdateTaskHomePage.Name = "btnUpdateTaskHomePage";
-            btnUpdateTaskHomePage.Size = new Size(129, 29);
+            btnUpdateTaskHomePage.Size = new Size(113, 22);
             btnUpdateTaskHomePage.TabIndex = 11;
             btnUpdateTaskHomePage.Text = "Update Task";
             btnUpdateTaskHomePage.UseVisualStyleBackColor = true;
@@ -168,46 +178,50 @@
             // 
             labelUpdateTaskHomePage.AutoSize = true;
             labelUpdateTaskHomePage.BorderStyle = BorderStyle.FixedSingle;
-            labelUpdateTaskHomePage.Location = new Point(147, 38);
-            labelUpdateTaskHomePage.Margin = new Padding(20);
+            labelUpdateTaskHomePage.Location = new Point(129, 28);
+            labelUpdateTaskHomePage.Margin = new Padding(18, 15, 18, 15);
             labelUpdateTaskHomePage.Name = "labelUpdateTaskHomePage";
-            labelUpdateTaskHomePage.Padding = new Padding(200, 20, 200, 350);
+            labelUpdateTaskHomePage.Padding = new Padding(175, 15, 175, 262);
             labelUpdateTaskHomePage.RightToLeft = RightToLeft.Yes;
-            labelUpdateTaskHomePage.Size = new Size(491, 392);
+            labelUpdateTaskHomePage.Size = new Size(422, 294);
             labelUpdateTaskHomePage.TabIndex = 12;
             labelUpdateTaskHomePage.Text = "Update Task";
             // 
             // btnSaveUpdateTaskHomePage
             // 
-            btnSaveUpdateTaskHomePage.Location = new Point(427, 324);
+            btnSaveUpdateTaskHomePage.Location = new Point(374, 243);
+            btnSaveUpdateTaskHomePage.Margin = new Padding(3, 2, 3, 2);
             btnSaveUpdateTaskHomePage.Name = "btnSaveUpdateTaskHomePage";
-            btnSaveUpdateTaskHomePage.Size = new Size(94, 29);
+            btnSaveUpdateTaskHomePage.Size = new Size(82, 22);
             btnSaveUpdateTaskHomePage.TabIndex = 13;
             btnSaveUpdateTaskHomePage.Text = "Save";
             btnSaveUpdateTaskHomePage.UseVisualStyleBackColor = true;
+            btnSaveUpdateTaskHomePage.Visible = false;
             btnSaveUpdateTaskHomePage.Click += btnSaveUpdateTaskHomePage_Click;
             // 
             // labelTaskIdUpdateHomePage
             // 
             labelTaskIdUpdateHomePage.AutoSize = true;
-            labelTaskIdUpdateHomePage.Location = new Point(190, 115);
+            labelTaskIdUpdateHomePage.Location = new Point(166, 86);
             labelTaskIdUpdateHomePage.Name = "labelTaskIdUpdateHomePage";
-            labelTaskIdUpdateHomePage.Size = new Size(56, 20);
+            labelTaskIdUpdateHomePage.Size = new Size(45, 15);
             labelTaskIdUpdateHomePage.TabIndex = 14;
             labelTaskIdUpdateHomePage.Text = "Task Id:";
             // 
             // tBTaskIdUpdateHomePage
             // 
-            tBTaskIdUpdateHomePage.Location = new Point(252, 112);
+            tBTaskIdUpdateHomePage.Location = new Point(220, 84);
+            tBTaskIdUpdateHomePage.Margin = new Padding(3, 2, 3, 2);
             tBTaskIdUpdateHomePage.Name = "tBTaskIdUpdateHomePage";
-            tBTaskIdUpdateHomePage.Size = new Size(125, 27);
+            tBTaskIdUpdateHomePage.Size = new Size(110, 23);
             tBTaskIdUpdateHomePage.TabIndex = 15;
             // 
             // btnDeleteTaskHomePage
             // 
-            btnDeleteTaskHomePage.Location = new Point(152, 303);
+            btnDeleteTaskHomePage.Location = new Point(133, 227);
+            btnDeleteTaskHomePage.Margin = new Padding(3, 2, 3, 2);
             btnDeleteTaskHomePage.Name = "btnDeleteTaskHomePage";
-            btnDeleteTaskHomePage.Size = new Size(94, 29);
+            btnDeleteTaskHomePage.Size = new Size(82, 22);
             btnDeleteTaskHomePage.TabIndex = 16;
             btnDeleteTaskHomePage.Text = "Delete Task";
             btnDeleteTaskHomePage.UseVisualStyleBackColor = true;
@@ -217,54 +231,62 @@
             // 
             labelDeleteTaskHomePage.AutoSize = true;
             labelDeleteTaskHomePage.BorderStyle = BorderStyle.FixedSingle;
-            labelDeleteTaskHomePage.Location = new Point(235, 51);
+            labelDeleteTaskHomePage.Location = new Point(206, 38);
             labelDeleteTaskHomePage.Name = "labelDeleteTaskHomePage";
-            labelDeleteTaskHomePage.Padding = new Padding(100, 10, 100, 150);
-            labelDeleteTaskHomePage.Size = new Size(286, 182);
+            labelDeleteTaskHomePage.Padding = new Padding(88, 8, 88, 112);
+            labelDeleteTaskHomePage.Size = new Size(243, 137);
             labelDeleteTaskHomePage.TabIndex = 17;
             labelDeleteTaskHomePage.Text = "Delete Task";
+            labelDeleteTaskHomePage.Visible = false;
             // 
             // btnClearDeleteHomePage
             // 
-            btnClearDeleteHomePage.Location = new Point(252, 189);
+            btnClearDeleteHomePage.Location = new Point(220, 142);
+            btnClearDeleteHomePage.Margin = new Padding(3, 2, 3, 2);
             btnClearDeleteHomePage.Name = "btnClearDeleteHomePage";
-            btnClearDeleteHomePage.Size = new Size(94, 29);
+            btnClearDeleteHomePage.Size = new Size(82, 22);
             btnClearDeleteHomePage.TabIndex = 18;
             btnClearDeleteHomePage.Text = "Clear";
             btnClearDeleteHomePage.UseVisualStyleBackColor = true;
+            btnClearDeleteHomePage.Visible = false;
             btnClearDeleteHomePage.Click += btnClearDeleteHomePage_Click;
             // 
             // btnDeleteDeleteHomePage
             // 
-            btnDeleteDeleteHomePage.Location = new Point(406, 189);
+            btnDeleteDeleteHomePage.Location = new Point(355, 142);
+            btnDeleteDeleteHomePage.Margin = new Padding(3, 2, 3, 2);
             btnDeleteDeleteHomePage.Name = "btnDeleteDeleteHomePage";
-            btnDeleteDeleteHomePage.Size = new Size(94, 29);
+            btnDeleteDeleteHomePage.Size = new Size(82, 22);
             btnDeleteDeleteHomePage.TabIndex = 19;
             btnDeleteDeleteHomePage.Text = "Delete";
             btnDeleteDeleteHomePage.UseVisualStyleBackColor = true;
+            btnDeleteDeleteHomePage.Visible = false;
             btnDeleteDeleteHomePage.Click += btnDeleteDeleteHomePage_Click;
             // 
             // labelTaskIdDeleteHomePage
             // 
             labelTaskIdDeleteHomePage.AutoSize = true;
-            labelTaskIdDeleteHomePage.Location = new Point(262, 116);
+            labelTaskIdDeleteHomePage.Location = new Point(229, 87);
             labelTaskIdDeleteHomePage.Name = "labelTaskIdDeleteHomePage";
-            labelTaskIdDeleteHomePage.Size = new Size(56, 20);
+            labelTaskIdDeleteHomePage.Size = new Size(45, 15);
             labelTaskIdDeleteHomePage.TabIndex = 20;
             labelTaskIdDeleteHomePage.Text = "Task Id:";
+            labelTaskIdDeleteHomePage.Visible = false;
             // 
             // tBTaskIdDeleteHomePage
             // 
-            tBTaskIdDeleteHomePage.Location = new Point(324, 113);
+            tBTaskIdDeleteHomePage.Location = new Point(284, 85);
+            tBTaskIdDeleteHomePage.Margin = new Padding(3, 2, 3, 2);
             tBTaskIdDeleteHomePage.Name = "tBTaskIdDeleteHomePage";
-            tBTaskIdDeleteHomePage.Size = new Size(125, 27);
+            tBTaskIdDeleteHomePage.Size = new Size(110, 23);
             tBTaskIdDeleteHomePage.TabIndex = 21;
+            tBTaskIdDeleteHomePage.Visible = false;
             // 
             // HomePage
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(tBTaskIdDeleteHomePage);
             Controls.Add(labelTaskIdDeleteHomePage);
             Controls.Add(btnDeleteDeleteHomePage);
@@ -287,6 +309,7 @@
             Controls.Add(btnDeleteTaskHomePage);
             Controls.Add(btnNewTaskHomePage);
             Controls.Add(btnUpdateTaskHomePage);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "HomePage";
             Text = "Tasky";
             Load += HomePage_Load;
