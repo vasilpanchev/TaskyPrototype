@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PresentationLayer", "WinFormsApp1\PresentationLayer.csproj", "{26D436AB-D5E7-4C54-9F0C-E183D8B16FDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingLayer", "TestingLayer\TestingLayer.csproj", "{7FB647FF-D5B3-4C29-89C4-B3CF34DF8502}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{26D436AB-D5E7-4C54-9F0C-E183D8B16FDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26D436AB-D5E7-4C54-9F0C-E183D8B16FDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26D436AB-D5E7-4C54-9F0C-E183D8B16FDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FB647FF-D5B3-4C29-89C4-B3CF34DF8502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FB647FF-D5B3-4C29-89C4-B3CF34DF8502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FB647FF-D5B3-4C29-89C4-B3CF34DF8502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB647FF-D5B3-4C29-89C4-B3CF34DF8502}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
