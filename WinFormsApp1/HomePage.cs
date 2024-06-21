@@ -39,6 +39,7 @@ namespace PresentationLayer
             labelEndDateTaskHomePage.Hide();
             tBTitleTaskHomePage.Hide();
             dTPTaskHomePage.Hide();
+            dTPTaskHomePage.Value = DateTime.Now;
             btnClearInfoTaskHomePage.Hide();
             btnSaveNewTaskHomePage.Hide();
         }
@@ -50,6 +51,7 @@ namespace PresentationLayer
             labelEndDateTaskHomePage.Show();
             tBTitleTaskHomePage.Show();
             dTPTaskHomePage.Show();
+            dTPTaskHomePage.Value = DateTime.Now;
             btnClearInfoTaskHomePage.Show();
             btnSaveNewTaskHomePage.Show();
         }
@@ -98,23 +100,39 @@ namespace PresentationLayer
 
         private void btnUpdateTaskHomePage_Click(object sender, EventArgs e)
         {
-            ShowUpdateTaskWindows();
+            try
+            {
+                var item = dGVTasksHomePage.SelectedRows[0].Cells;
+                ShowUpdateTaskWindows();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There isn't a selected task to update it!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDeleteTaskHomePage_Click(object sender, EventArgs e)
         {
-            var item = dGVTasksHomePage.SelectedRows[0].Cells;
-            int taskToUpdateId = int.Parse(item[0].Value.ToString());
+            try
+            {
+                var item = dGVTasksHomePage.SelectedRows[0].Cells;
+                int taskToUpdateId = int.Parse(item[0].Value.ToString());
 
-            UserTaskContext userTaskContext = new UserTaskContext(taskyPrototypeContext);
+                UserTaskContext userTaskContext = new UserTaskContext(taskyPrototypeContext);
 
-            userTaskContext.Delete(taskToUpdateId);
-            UpdateData();
+                userTaskContext.Delete(taskToUpdateId);
+                UpdateData();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("There isn't a selected task to delete it!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnClearInfoTaskHomePage_Click(object sender, EventArgs e)
         {
             tBTitleTaskHomePage.Clear();
+            dTPTaskHomePage.Value = DateTime.Now;
         }
 
         private void btnSaveNewTaskHomePage_Click(object sender, EventArgs e)
@@ -140,19 +158,19 @@ namespace PresentationLayer
 
         private void btnSaveUpdateTaskHomePage_Click(object sender, EventArgs e)
         {
-            string taskTitle = tBTitleTaskHomePage.Text;
+                string taskTitle = tBTitleTaskHomePage.Text;
 
-            var item = dGVTasksHomePage.SelectedRows[0].Cells;
-            var taskToUpdateId = int.Parse(item[0].Value.ToString());
+                var item = dGVTasksHomePage.SelectedRows[0].Cells;
+                var taskToUpdateId = int.Parse(item[0].Value.ToString());
 
-            UserTaskContext userTaskContext = new UserTaskContext(taskyPrototypeContext);
+                UserTaskContext userTaskContext = new UserTaskContext(taskyPrototypeContext);
 
-            UserTask selectedTask = userTaskContext.Read(taskToUpdateId);
+                UserTask selectedTask = userTaskContext.Read(taskToUpdateId);
 
-            selectedTask.TaskId = taskToUpdateId;
-            selectedTask.Title = taskTitle;
-            selectedTask.StartDate = DateTime.Now;
-            selectedTask.EndDate = dTPTaskHomePage.Value;
+                selectedTask.TaskId = taskToUpdateId;
+                selectedTask.Title = taskTitle;
+                selectedTask.StartDate = DateTime.Now;
+                selectedTask.EndDate = dTPTaskHomePage.Value;
 
             userTaskContext.Update(selectedTask);
 
@@ -162,6 +180,5 @@ namespace PresentationLayer
 
             tBTitleTaskHomePage.Clear();
         }
-
     }
 }

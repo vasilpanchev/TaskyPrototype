@@ -25,10 +25,12 @@ namespace TestingLayer
             Assert.That(testingUser, Is.EqualTo(userContext.Read(testingUser.Username)), "Create method for User isn't working");
         }
 
+        [Test]
         public void TestReadUser()
         {
             TaskyPrototypeContext taskyPrototypeContext = new TaskyPrototypeContext();
             userContext = new UserContext(taskyPrototypeContext);
+
             User testingUser = new User("Atanas", "examplePassword") { Username = "Atanas", Password = "examplePassword" };
 
             User userFromDB = userContext.Read(testingUser.Username);
@@ -37,6 +39,7 @@ namespace TestingLayer
             Assert.That(testingUser, Is.EqualTo(userFromDB), "Read method for User isn't working");
         }
 
+        [Test]
         public void TestUpdateUser()
         {
             TaskyPrototypeContext taskyPrototypeContext = new TaskyPrototypeContext();
@@ -46,7 +49,7 @@ namespace TestingLayer
             userContext.Update(updatedUser);
 
             //Assert.AreEqual(userContext.Read(updatedUser.Username, updatedUser, "Read method isn't working");
-            Assert.That(updatedUser, Is.EqualTo(userContext.Read(updatedUser.Username)), "Create method for User isn't working");
+            Assert.That(updatedUser, Is.EqualTo(userContext.Read(updatedUser.Username)), "Update method for User isn't working");
         }
         
         [Test]

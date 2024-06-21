@@ -46,7 +46,7 @@ namespace TestingLayer
 
             userTaskContext.Update(updatedTask);
 
-            Assert.That(updatedTask, Is.EqualTo(userTaskContext.Read(updatedTask.TaskId)), "Create method for Task isn't working");
+            Assert.That(updatedTask, Is.EqualTo(userTaskContext.Read(updatedTask.TaskId)), "Update method for Task isn't working");
         }
 
         [Test]
