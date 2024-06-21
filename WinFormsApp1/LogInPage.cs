@@ -17,8 +17,6 @@ namespace PresentationLayer
     public partial class LogInPage : Form
     {
         TaskyPrototypeContext taskyPrototypeContext = new TaskyPrototypeContext();
-        string currentUsername = "";
-        string currentPassword = "";
 
         public LogInPage()
         {
@@ -42,16 +40,20 @@ namespace PresentationLayer
 
                 User fromDataUser = fromContextUser.Read(fromUserUsername);
 
-                if (fromUserUser.Password.Equals(fromDataUser.Password) && fromDataUser is not null)
+                try
                 {
-                    currentUsername = fromUserUsername;
-                    currentPassword = fromUserPassword;
-
-                    this.Hide();
-                    HomePage homePage = new HomePage(fromUserUser);
-                    homePage.Show();
+                    if (fromDataUser is not null && fromUserUser.Password.Equals(fromDataUser.Password))
+                    {
+                        this.Hide();
+                        HomePage homePage = new HomePage(fromUserUser);
+                        homePage.Show();
+                    }
+                    else
+                    {
+                        throw new Exception();
+                    }
                 }
-                else
+                catch(Exception)
                 {
                     MessageBox.Show("There isn't an account with this information!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

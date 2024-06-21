@@ -45,13 +45,20 @@ namespace PresentationLayer
                 }
                 else
                 {
-                    fromContextUser.Create(fromUserUser);
+                    if(fromUserPassword == fromUserConPassword)
+                    {
+                        fromContextUser.Create(fromUserUser);
 
-                    MessageBox.Show("The user was created succesfuly!", "Tasky", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("The user was created succesfuly!", "Tasky", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    this.Hide();
-                    LogInPage logInPage = new LogInPage();
-                    logInPage.Show();
+                        this.Hide();
+                        LogInPage logInPage = new LogInPage();
+                        logInPage.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("The confirmation password doesn't match with the password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else

@@ -105,7 +105,7 @@ namespace PresentationLayer
                 var item = dGVTasksHomePage.SelectedRows[0].Cells;
                 ShowUpdateTaskWindows();
             }
-            catch (Exception ex)
+            catch(Exception)
             {
                 MessageBox.Show("There isn't a selected task to update it!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -123,7 +123,7 @@ namespace PresentationLayer
                 userTaskContext.Delete(taskToUpdateId);
                 UpdateData();
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 MessageBox.Show("There isn't a selected task to delete it!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
