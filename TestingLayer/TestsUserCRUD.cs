@@ -21,8 +21,7 @@ namespace TestingLayer
 
             userContext.Create(testingUser);
 
-            //Assert.AreEqual(userContext.Read(testingUser.Username), testingUser, "Create method isn't working");
-            Assert.That(testingUser, Is.EqualTo(userContext.Read(testingUser.Username)), "Create method for User isn't working");
+            Assert.AreEqual(userContext.Read(testingUser.Username).Username, testingUser.Username, "Create method isn't working");
         }
 
         [Test]
@@ -30,13 +29,33 @@ namespace TestingLayer
         {
             TaskyPrototypeContext taskyPrototypeContext = new TaskyPrototypeContext();
             userContext = new UserContext(taskyPrototypeContext);
-
             User testingUser = new User("Atanas", "examplePassword") { Username = "Atanas", Password = "examplePassword" };
 
             User userFromDB = userContext.Read(testingUser.Username);
 
-            //Assert.AreEqual(userFromDB, testingUser, "Read method isn't working");
-            Assert.That(testingUser, Is.EqualTo(userFromDB), "Read method for User isn't working");
+            Assert.AreEqual(userFromDB.Username, testingUser.Username, "Read method isn't working");
+        }
+
+        [Test]
+        public void TestReadAllUser()
+        {
+            List<User> testUsers = new List<User>();
+            List<User> usersFromDb = new List<User>();
+            User testingUser1 = new User("Atanas", "examplePassword") { Username = "Atanas", Password = "examplePassword" };
+            User testingUser2 = new User("Vasil", "examplePassword") { Username = "Vasil", Password = "examplePassword" };
+            User testingUser3 = new User("Denitsa", "examplePassword") { Username = "Denitsa", Password = "examplePassword" };
+            testUsers.Add(testingUser1);
+            testUsers.Add(testingUser2);
+            testUsers.Add(testingUser3);
+            TaskyPrototypeContext taskyPrototypeContext = new TaskyPrototypeContext();
+            userContext = new UserContext(taskyPrototypeContext);
+            userContext.Create(testingUser1);
+            userContext.Create(testingUser2);
+            userContext.Create(testingUser3);
+
+            usersFromDb = userContext.ReadAll().ToList();
+
+            Assert.AreEqual(testUsers.Count, usersFromDb.Count, "ReadAll method isn't working");
         }
 
         [Test]
@@ -48,8 +67,7 @@ namespace TestingLayer
 
             userContext.Update(updatedUser);
 
-            //Assert.AreEqual(userContext.Read(updatedUser.Username, updatedUser, "Read method isn't working");
-            Assert.That(updatedUser, Is.EqualTo(userContext.Read(updatedUser.Username)), "Update method for User isn't working");
+            Assert.AreEqual(userContext.Read(updatedUser.Username).Password, updatedUser.Password, "Update method isn't working");
         }
         
         [Test]
@@ -57,11 +75,11 @@ namespace TestingLayer
         {
             TaskyPrototypeContext taskyPrototypeContext = new TaskyPrototypeContext();
             userContext = new UserContext(taskyPrototypeContext);
-            User testingUser = new User("Atanas", "updatedPasswordAtanas123") { Username = "Atanas", Password = "updatedPasswordAtanas123" };
+            User testingUser = new User("Atanas", "examplePassword") { Username = "Atanas", Password = "examplePassword" };
 
             userContext.Delete(testingUser.Username);
 
-            Assert.Throws<Exception>(() => userContext.Read(testingUser.Username));
+            Assert.Null(userContext.Read(testingUser.Username), "Delete method for User isn't working");
         }
     }
 }

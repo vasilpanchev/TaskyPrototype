@@ -45,7 +45,7 @@ namespace DataLayer
                     query = query.AsNoTrackingWithIdentityResolution();
                 }
 
-                return query.SingleOrDefault(u => u.Username == key);
+                return query.FirstOrDefault(u => u.Username == key);
             }
             catch(Exception)
             {
@@ -53,7 +53,7 @@ namespace DataLayer
             }
         }
 
-        public List<User> ReadAll(string key, bool useNavigationalProperties = false, bool isReadOnlyTrue = true)
+        public List<User> ReadAll(bool useNavigationalProperties = false, bool isReadOnlyTrue = true)
         {
             try
             {
@@ -80,12 +80,12 @@ namespace DataLayer
             {
                 User userFromDb = Read(entity.Username, useNavigationalProperties = false);
 
-                if (userFromDb != null)
+                if (userFromDb == null)
                 {
                     throw new ArgumentException("User with username " + entity.Username + " does not exist.");
                 }
 
-                _taskyPrototypeContext.Update(entity.Password);
+                _taskyPrototypeContext.Update(entity);
                 _taskyPrototypeContext.SaveChanges();
             }
             catch (Exception)
@@ -100,7 +100,7 @@ namespace DataLayer
             {
                 User user = Read(key, false, false);
 
-                if (user != null) 
+                if (user == null) 
                 {
                     throw new ArgumentException("User with username " + key + " does not exist");
                 }
