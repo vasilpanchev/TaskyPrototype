@@ -43,86 +43,104 @@
             // labelRegisterRegisterPage
             // 
             labelRegisterRegisterPage.AutoSize = true;
-            labelRegisterRegisterPage.Location = new Point(363, 93);
+            labelRegisterRegisterPage.Font = new Font("Book Antiqua", 22F, FontStyle.Bold);
+            labelRegisterRegisterPage.ForeColor = SystemColors.HotTrack;
+            labelRegisterRegisterPage.Location = new Point(318, 55);
             labelRegisterRegisterPage.Name = "labelRegisterRegisterPage";
-            labelRegisterRegisterPage.Size = new Size(63, 20);
+            labelRegisterRegisterPage.Size = new Size(159, 44);
             labelRegisterRegisterPage.TabIndex = 0;
             labelRegisterRegisterPage.Text = "Register";
             // 
             // labelUsernameRegisterPage
             // 
             labelUsernameRegisterPage.AutoSize = true;
-            labelUsernameRegisterPage.Location = new Point(207, 174);
+            labelUsernameRegisterPage.Font = new Font("Book Antiqua", 15F);
+            labelUsernameRegisterPage.ForeColor = SystemColors.HotTrack;
+            labelUsernameRegisterPage.Location = new Point(246, 142);
             labelUsernameRegisterPage.Name = "labelUsernameRegisterPage";
-            labelUsernameRegisterPage.Size = new Size(78, 20);
+            labelUsernameRegisterPage.Size = new Size(134, 31);
             labelUsernameRegisterPage.TabIndex = 1;
             labelUsernameRegisterPage.Text = "Username:";
             // 
             // labelPasswordRegisterPage
             // 
             labelPasswordRegisterPage.AutoSize = true;
-            labelPasswordRegisterPage.Location = new Point(212, 211);
+            labelPasswordRegisterPage.Font = new Font("Book Antiqua", 15F);
+            labelPasswordRegisterPage.ForeColor = SystemColors.HotTrack;
+            labelPasswordRegisterPage.Location = new Point(250, 184);
             labelPasswordRegisterPage.Name = "labelPasswordRegisterPage";
-            labelPasswordRegisterPage.Size = new Size(73, 20);
+            labelPasswordRegisterPage.Size = new Size(130, 31);
             labelPasswordRegisterPage.TabIndex = 2;
             labelPasswordRegisterPage.Text = "Password:";
             // 
             // labelConPasswordRegisterPage
             // 
             labelConPasswordRegisterPage.AutoSize = true;
-            labelConPasswordRegisterPage.Location = new Point(153, 252);
+            labelConPasswordRegisterPage.Font = new Font("Book Antiqua", 15F);
+            labelConPasswordRegisterPage.ForeColor = SystemColors.HotTrack;
+            labelConPasswordRegisterPage.Location = new Point(150, 226);
             labelConPasswordRegisterPage.Name = "labelConPasswordRegisterPage";
-            labelConPasswordRegisterPage.Size = new Size(132, 20);
+            labelConPasswordRegisterPage.Size = new Size(230, 31);
             labelConPasswordRegisterPage.TabIndex = 3;
             labelConPasswordRegisterPage.Text = "Confirm password:";
             // 
             // tBUsernameRegisterPage
             // 
-            tBUsernameRegisterPage.Location = new Point(291, 171);
+            tBUsernameRegisterPage.Location = new Point(386, 146);
             tBUsernameRegisterPage.Name = "tBUsernameRegisterPage";
             tBUsernameRegisterPage.Size = new Size(125, 27);
             tBUsernameRegisterPage.TabIndex = 4;
             // 
             // tBPasswordRegisterPage
             // 
-            tBPasswordRegisterPage.Location = new Point(291, 211);
+            tBPasswordRegisterPage.Location = new Point(386, 188);
             tBPasswordRegisterPage.Name = "tBPasswordRegisterPage";
             tBPasswordRegisterPage.Size = new Size(125, 27);
             tBPasswordRegisterPage.TabIndex = 5;
             // 
             // tBConPasswordRegisterPage
             // 
-            tBConPasswordRegisterPage.Location = new Point(291, 249);
+            tBConPasswordRegisterPage.Location = new Point(386, 230);
             tBConPasswordRegisterPage.Name = "tBConPasswordRegisterPage";
             tBConPasswordRegisterPage.Size = new Size(125, 27);
             tBConPasswordRegisterPage.TabIndex = 6;
             // 
             // btnRegisterRegisterPage
             // 
+            btnRegisterRegisterPage.BackColor = Color.RoyalBlue;
+            btnRegisterRegisterPage.FlatAppearance.BorderColor = Color.Black;
+            btnRegisterRegisterPage.FlatStyle = FlatStyle.Flat;
+            btnRegisterRegisterPage.ForeColor = Color.White;
             btnRegisterRegisterPage.Location = new Point(344, 303);
             btnRegisterRegisterPage.Name = "btnRegisterRegisterPage";
             btnRegisterRegisterPage.Size = new Size(94, 29);
             btnRegisterRegisterPage.TabIndex = 7;
             btnRegisterRegisterPage.Text = "Register";
-            btnRegisterRegisterPage.UseVisualStyleBackColor = true;
-            btnRegisterRegisterPage.Click += this.btnRegisterRegisterPage_Click;
+            btnRegisterRegisterPage.UseVisualStyleBackColor = false;
+            btnRegisterRegisterPage.Click += btnRegisterRegisterPage_Click;
             // 
             // btnLogInRegisterPage
             // 
+            btnLogInRegisterPage.BackColor = Color.RoyalBlue;
+            btnLogInRegisterPage.FlatAppearance.BorderColor = Color.Black;
+            btnLogInRegisterPage.FlatStyle = FlatStyle.Flat;
+            btnLogInRegisterPage.ForeColor = Color.White;
             btnLogInRegisterPage.Location = new Point(427, 373);
             btnLogInRegisterPage.Name = "btnLogInRegisterPage";
             btnLogInRegisterPage.Size = new Size(94, 29);
             btnLogInRegisterPage.TabIndex = 8;
             btnLogInRegisterPage.Text = "LogIn";
-            btnLogInRegisterPage.UseVisualStyleBackColor = true;
-            btnLogInRegisterPage.Click += this.btnLogInRegisterPage_Click;
+            btnLogInRegisterPage.UseVisualStyleBackColor = false;
+            btnLogInRegisterPage.Click += btnLogInRegisterPage_Click;
             // 
             // labelQuestionRegisterPage
             // 
             labelQuestionRegisterPage.AutoSize = true;
-            labelQuestionRegisterPage.Location = new Point(246, 377);
+            labelQuestionRegisterPage.Font = new Font("Book Antiqua", 11F);
+            labelQuestionRegisterPage.ForeColor = SystemColors.HotTrack;
+            labelQuestionRegisterPage.Location = new Point(189, 376);
             labelQuestionRegisterPage.Name = "labelQuestionRegisterPage";
-            labelQuestionRegisterPage.Size = new Size(180, 20);
+            labelQuestionRegisterPage.Size = new Size(232, 23);
             labelQuestionRegisterPage.TabIndex = 9;
             labelQuestionRegisterPage.Text = "Already have an acoount?";
             // 
@@ -130,6 +148,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(800, 450);
             Controls.Add(labelQuestionRegisterPage);
             Controls.Add(btnLogInRegisterPage);

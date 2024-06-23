@@ -41,69 +41,87 @@
             // labelLogInLogInPage
             // 
             labelLogInLogInPage.AutoSize = true;
-            labelLogInLogInPage.Location = new Point(356, 106);
+            labelLogInLogInPage.Font = new Font("Book Antiqua", 22F, FontStyle.Bold);
+            labelLogInLogInPage.ForeColor = SystemColors.HotTrack;
+            labelLogInLogInPage.Location = new Point(325, 69);
+            labelLogInLogInPage.Margin = new Padding(3);
             labelLogInLogInPage.Name = "labelLogInLogInPage";
-            labelLogInLogInPage.Size = new Size(46, 20);
+            labelLogInLogInPage.Padding = new Padding(0, 0, 0, 3);
+            labelLogInLogInPage.Size = new Size(121, 47);
             labelLogInLogInPage.TabIndex = 0;
             labelLogInLogInPage.Text = "LogIn";
             // 
             // labelUsernameLogInPage
             // 
             labelUsernameLogInPage.AutoSize = true;
-            labelUsernameLogInPage.Location = new Point(222, 191);
+            labelUsernameLogInPage.Font = new Font("Book Antiqua", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelUsernameLogInPage.ForeColor = SystemColors.HotTrack;
+            labelUsernameLogInPage.Location = new Point(223, 173);
             labelUsernameLogInPage.Name = "labelUsernameLogInPage";
-            labelUsernameLogInPage.Size = new Size(78, 20);
+            labelUsernameLogInPage.Size = new Size(134, 31);
             labelUsernameLogInPage.TabIndex = 1;
             labelUsernameLogInPage.Text = "Username:";
             // 
             // labelPasswordLogInPage
             // 
             labelPasswordLogInPage.AutoSize = true;
-            labelPasswordLogInPage.Location = new Point(227, 237);
+            labelPasswordLogInPage.Font = new Font("Book Antiqua", 15F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelPasswordLogInPage.ForeColor = SystemColors.HotTrack;
+            labelPasswordLogInPage.Location = new Point(227, 223);
             labelPasswordLogInPage.Name = "labelPasswordLogInPage";
-            labelPasswordLogInPage.Size = new Size(73, 20);
+            labelPasswordLogInPage.Size = new Size(130, 31);
             labelPasswordLogInPage.TabIndex = 2;
             labelPasswordLogInPage.Text = "Password:";
             // 
             // btnLogInLogInPage
             // 
-            btnLogInLogInPage.Location = new Point(353, 290);
+            btnLogInLogInPage.BackColor = Color.RoyalBlue;
+            btnLogInLogInPage.FlatAppearance.BorderColor = Color.Black;
+            btnLogInLogInPage.FlatStyle = FlatStyle.Flat;
+            btnLogInLogInPage.ForeColor = Color.White;
+            btnLogInLogInPage.Location = new Point(339, 292);
             btnLogInLogInPage.Name = "btnLogInLogInPage";
             btnLogInLogInPage.Size = new Size(94, 29);
             btnLogInLogInPage.TabIndex = 3;
             btnLogInLogInPage.Text = "LogIn";
-            btnLogInLogInPage.UseVisualStyleBackColor = true;
+            btnLogInLogInPage.UseVisualStyleBackColor = false;
             btnLogInLogInPage.Click += btnLogInLogInPage_Click;
             // 
             // btnRegisterLogInPage
             // 
-            btnRegisterLogInPage.Location = new Point(418, 354);
+            btnRegisterLogInPage.BackColor = Color.RoyalBlue;
+            btnRegisterLogInPage.FlatAppearance.BorderColor = Color.Black;
+            btnRegisterLogInPage.FlatStyle = FlatStyle.Flat;
+            btnRegisterLogInPage.ForeColor = Color.White;
+            btnRegisterLogInPage.Location = new Point(439, 354);
             btnRegisterLogInPage.Name = "btnRegisterLogInPage";
             btnRegisterLogInPage.Size = new Size(94, 29);
             btnRegisterLogInPage.TabIndex = 4;
             btnRegisterLogInPage.Text = "Register";
-            btnRegisterLogInPage.UseVisualStyleBackColor = true;
+            btnRegisterLogInPage.UseVisualStyleBackColor = false;
             btnRegisterLogInPage.Click += btnRegisterLogInPage_Click;
             // 
             // labelQuestionLogInPage
             // 
             labelQuestionLogInPage.AutoSize = true;
-            labelQuestionLogInPage.Location = new Point(269, 358);
+            labelQuestionLogInPage.Font = new Font("Book Antiqua", 11F);
+            labelQuestionLogInPage.ForeColor = SystemColors.HotTrack;
+            labelQuestionLogInPage.Location = new Point(254, 357);
             labelQuestionLogInPage.Name = "labelQuestionLogInPage";
-            labelQuestionLogInPage.Size = new Size(143, 20);
+            labelQuestionLogInPage.Size = new Size(179, 23);
             labelQuestionLogInPage.TabIndex = 5;
             labelQuestionLogInPage.Text = "Don't have account?";
             // 
             // tBUsernameLogInPage
             // 
-            tBUsernameLogInPage.Location = new Point(306, 188);
+            tBUsernameLogInPage.Location = new Point(363, 177);
             tBUsernameLogInPage.Name = "tBUsernameLogInPage";
             tBUsernameLogInPage.Size = new Size(125, 27);
             tBUsernameLogInPage.TabIndex = 6;
             // 
             // tBPasswordLogInPage
             // 
-            tBPasswordLogInPage.Location = new Point(306, 234);
+            tBPasswordLogInPage.Location = new Point(363, 227);
             tBPasswordLogInPage.Name = "tBPasswordLogInPage";
             tBPasswordLogInPage.Size = new Size(125, 27);
             tBPasswordLogInPage.TabIndex = 7;
@@ -112,6 +130,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(800, 450);
             Controls.Add(tBPasswordLogInPage);
             Controls.Add(tBUsernameLogInPage);
@@ -121,6 +140,7 @@
             Controls.Add(labelPasswordLogInPage);
             Controls.Add(labelUsernameLogInPage);
             Controls.Add(labelLogInLogInPage);
+            ForeColor = SystemColors.ControlText;
             Name = "LogInPage";
             Text = "Tasky";
             ResumeLayout(false);
